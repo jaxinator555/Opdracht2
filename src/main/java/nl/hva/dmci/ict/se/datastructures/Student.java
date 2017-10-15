@@ -5,6 +5,8 @@
  */
 package nl.hva.dmci.ict.se.datastructures;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author jacco en yasmin
@@ -44,7 +46,10 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student{" + "studentnummer=" + studentnummer + ", cijfer=" + cijfer + '}';
+		String formatcijfer;
+		DecimalFormat df = new DecimalFormat("#.00");
+		formatcijfer = df.format(cijfer);
+		return "Student{" + "studentnummer=" + studentnummer + ", cijfer=" + formatcijfer + '}';
 	}
 
 	
