@@ -1,4 +1,4 @@
-Dictionary.class
-nl\hva\dmci\ict\se\datastructures\Rijtjes.class
-nl\hva\dmci\ict\se\datastructures\DictionaryGenerator.class
-nl\hva\dmci\ict\se\datastructures\RijtjesControle.class
+nl\hva\dmci\ict\se\datastructures\util\Schudder.class
+nl\hva\dmci\ict\se\datastructures\Student.class
+nl\hva\dmci\ict\se\datastructures\KlasGenerator.class
+nl\hva\dmci\ict\se\datastructures\Main.class
