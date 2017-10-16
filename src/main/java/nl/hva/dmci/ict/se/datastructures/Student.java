@@ -52,6 +52,26 @@ public class Student {
 		return "Student{" + "studentnummer=" + studentnummer + ", cijfer=" + formatcijfer + '}';
 	}
 
+	/**
+	 *
+	 * @param o StudentObject
+	 * @return Returns 1 if given student has a higher grade.
+	 *		   Returns -1 if given student has a lower grade
+	 */
+
+
+	public int compareTo(Student o) {
+		if (o.getCijfer() > this.getCijfer()) {
+			return 1;
+		} else if (o.getCijfer() < this.getCijfer()){
+			return -1;
+		}
+		return 0;
+
+	}
+
+
+
 	
 
 }

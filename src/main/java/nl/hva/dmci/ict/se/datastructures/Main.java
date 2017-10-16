@@ -15,7 +15,7 @@ public class Main {
 	 * @param args the command line arguments
 	 */
 	public static void main(String[] args) {
-		Student[] studenten = new Student[10000];
+		Student[] studenten = new Student[1000];
 		Student test = new Student();
 
 		for (int i = 0; i < studenten.length; i++) {
