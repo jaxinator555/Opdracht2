@@ -26,7 +26,7 @@ public class Main {
 		}
 
 		List frequentie = new ArrayList();
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i <= 1000; i++) {
 			frequentie.add(0);
 		}
 		frequentie.set(1,4);
@@ -39,7 +39,6 @@ public class Main {
 		}
 		for (int i = 0; i < frequentie.size(); i++) {
 			System.out.println(i +" "+  frequentie.get(i));
-
 		}
 	}
 
