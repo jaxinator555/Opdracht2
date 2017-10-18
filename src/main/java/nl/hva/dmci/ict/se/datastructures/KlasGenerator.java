@@ -14,8 +14,8 @@ public class KlasGenerator {
     /**
      * Genereerd een willekeurig verdeelde lijst met klasnamen voor een aantal studenten.
      * 
-     * @param aantalStudenten
-     *            het aantal studenten waarvoor de klassen gemaakt moeten worden.
+     * @param aantalStudenten het aantal studenten waarvoor de klassen gemaakt moeten worden.
+     *            
      * @return een lijst met per student de klas waar hij/zijn aan is toegewezen.
      */
     public static String[] maakKlassen(int aantalStudenten) {

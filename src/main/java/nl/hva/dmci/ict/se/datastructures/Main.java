@@ -29,11 +29,11 @@ public class Main {
 		for (int i = 0; i <= 1000; i++) {
 			frequentie.add(0);
 		}
-		frequentie.set(1,4);
-//		frequentie.add(0, );
+
 		for (int i = 0; i < studenten.length; i++) {
 			System.out.println(studenten[i].toString());
-			int cijfer = (int) (studenten[i].getCijfer()*100);
+			int cijfer = (int) (studenten[i].getCijfer()*100); //*100 want dan krijg je hele getallen
+                        // je cast het naar een int en tel 1 op om iedere keer het aantal op te hogen
 			frequentie.set(cijfer, (int) frequentie.get(cijfer) + 1);
 			
 		}
