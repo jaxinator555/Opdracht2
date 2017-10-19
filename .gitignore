@@ -1,1 +1,4 @@
 *.netbeans_automatic_build
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/classes/nl/hva/dmci/ict/se/datastructures/Main$1.class

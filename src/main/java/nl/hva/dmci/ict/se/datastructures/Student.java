@@ -56,7 +56,7 @@ public class Student {
         if (this.getCijfer() < o.getCijfer()) {
             return -1;
         } else if (this.getCijfer() == o.getCijfer()) {
-            if (this.getStudentnummer() < o.getStudentnummer()) {
+            if (this.getStudentnummer() > o.getStudentnummer()) {
                 return 0;
             }
         }
