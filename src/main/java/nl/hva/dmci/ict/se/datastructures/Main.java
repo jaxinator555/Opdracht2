@@ -11,10 +11,14 @@ public class Main implements RijtjesControle {
 	/**
 	 * @param args the command line arguments
 	 */
-	public static Student[] studenten = new Student[1000];
+
+	public static final int AANTAL_STUDENTEN = 1000;
+
+	public static Student[] studenten = new Student[AANTAL_STUDENTEN];
 
 	public static void main(String[] args) {
 
+		//Vul de array met studenten met willekeurige cijfers.
 		for (int i = 0; i < studenten.length; i++) {
 			Random random = new Random();
 			long studentnummer = 50080001 + i;
@@ -22,11 +26,13 @@ public class Main implements RijtjesControle {
 			studenten[i] = new Student(studentnummer, cijfer);
 		}
 
+		//arraylist aanmaken voor de frequentie van de cijfers.
 		List frequentie = new ArrayList();
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < AANTAL_STUDENTEN; i++) {
 			frequentie.add(0);
 		}
 
+		//Print de studenten, en zorg dat de frequentielijst op de juiste positie verhoogd wordt.
 		for (int i = 0; i < studenten.length; i++) {
 			System.out.println(studenten[i].toString());
 			int cijfer = (int) (studenten[i].getCijfer() * 100); //*100 want dan krijg je hele getallen
@@ -34,15 +40,25 @@ public class Main implements RijtjesControle {
 			frequentie.set(cijfer, (int) frequentie.get(cijfer) + 1);
 		}
 
+		//schud de studenten
 		Schudder.schud(studenten);
-//        selectionSort(studenten);
+
+		//maak een nieuwe array aan waarin de gesorteerde array komt te staan
 		Student[] sorted = new Student[studenten.length];
+
+		//Vul de array met gesorteerde waarden.
 		sorted = selectionSort(studenten);
-		System.out.println("###SORTED###");
+
+		//Print de gesorteerde array
+		System.out.println("		###SORTED###");
+		System.out.println("		###SORTED###");
+		System.out.println("		###SORTED###");
 		for (int i = 0; i < frequentie.size(); i++) {
 			System.out.println(i + " " + sorted[i]);
 		}
 
+
+		//TODO, Impement de code
 		RijtjesControle checker = new RijtjesControle() {
 			@Override
 			public <T extends Comparable<T>> boolean isDalend(List<T> rijtje) {
@@ -59,6 +75,8 @@ public class Main implements RijtjesControle {
 				throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 			}
 		};
+
+		//TODO, fix deze shit
 		System.out.println("Stijgend gesorteerd" + checker.isStijgend(Arrays.asList(studenten)));
 		if (checker.isStijgend(Arrays.asList(studenten))) {
 			System.out.println("stijgend");
@@ -68,6 +86,7 @@ public class Main implements RijtjesControle {
 
 	}
 
+	//Dit is het selectionsort algoritme
 	public static Student[] selectionSort(Student[] studenten) {
 
 		for (int i = 0; i < studenten.length; i++) {
@@ -88,11 +107,15 @@ public class Main implements RijtjesControle {
 		return studenten;
 	}
 
+
+
+	//help
 	@Override
 	public <T extends Comparable<T>> boolean isDalend(List<T> rijtje) {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
+	//wats deze
 	@Override
 	public <T extends Comparable<T>> boolean isStijgend(List<T> rijtje) {
 		if (rijtje != null) {
@@ -104,12 +127,14 @@ public class Main implements RijtjesControle {
 					return false;
 				}
 				rijtje.remove(0);
-				return isStijgend(rijtje, 1);
+				return isStijgend(rijtje);
 			}
 		}
 		return false;
 	}
 
+
+	//halp
 	@Override
 	public <T extends Comparable<T>> boolean isGelijk(List<T> rijtje) {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
