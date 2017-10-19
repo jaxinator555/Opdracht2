@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 /**
  *
- * @author jacco en yasmin
+ * @author jacco en yasmin en wyomi
  */
 public class Student {
 

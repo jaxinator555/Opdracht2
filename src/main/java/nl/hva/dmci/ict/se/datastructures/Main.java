@@ -57,6 +57,10 @@ public class Main implements RijtjesControle {
 			System.out.println(i + " " + sorted[i]);
 		}
 
+		String[] temp;
+		temp = KlasGenerator.maakKlassen(AANTAL_STUDENTEN);
+		System.out.println(temp[1] + "");
+
 
 		//TODO, Impement de code
 		RijtjesControle checker = new RijtjesControle() {
@@ -77,12 +81,12 @@ public class Main implements RijtjesControle {
 		};
 
 		//TODO, fix deze shit
-		System.out.println("Stijgend gesorteerd" + checker.isStijgend(Arrays.asList(studenten)));
-		if (checker.isStijgend(Arrays.asList(studenten))) {
-			System.out.println("stijgend");
-		} else {
-			System.out.println("niet stijgend");
-		}
+//		System.out.println("Stijgend gesorteerd" + checker.isStijgend(Arrays.asList(studenten)));
+//		if (checker.isStijgend(Arrays.asList(studenten))) {
+//			System.out.println("stijgend");
+//		} else {
+//			System.out.println("niet stijgend");
+//		}
 
 	}
 
