@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package nl.hva.dmci.ict.se.datastructures;
 
 import java.text.DecimalFormat;
@@ -56,6 +51,7 @@ public class Student {
      * @return Returns 1 if given student has a higher grade. Returns -1 if
      * given student has a lower grade
      */
+    
     public int compareTo(Student o) {
         if (this.getCijfer() < o.getCijfer()) {
             return -1;

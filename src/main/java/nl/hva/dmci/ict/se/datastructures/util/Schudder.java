@@ -15,6 +15,7 @@ public class Schudder {
     /**
      * Schud de waardes van een array willekeurig door elkaar.
      * 
+     * @param <T>
      * @param waardes
      *            het array dat geschud moet worden.
      */
